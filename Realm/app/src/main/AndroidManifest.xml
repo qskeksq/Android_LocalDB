@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.administrator.realm">
+
+    <!-- android:name=".RealmApp"을 해주면 액티비티들이 공통적으로 사용할 때 호출이 필요한 정보 -->
+    <!-- 모든 액티비티 합쳐서 처음 한 번 호출됨 -->
+    <!-- 가지고 있는 컨텍스트 자원이 달라서 데이터베이스 초기화 할 수 없다 -->
+    <!-- 데이터베이스처럼 초기화할 수 없는 케이스가 있을 수 있으니 많이 사용하지 않도록 하자 -->
+
+    <application
+        android:name=".RealmApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
