@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zzzhyun.subwayapp.MainActivity">
+
+    <Spinner
+        android:id="@+id/lineSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:dropDownWidth="match_parent"
+        android:gravity="center_vertical|center_horizontal"
+        app:layout_constraintDimensionRatio=""
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/stationSpinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:dropDownWidth="match_parent"
+        android:gravity="center_vertical|center_horizontal"
+        app:layout_constraintDimensionRatio=""
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toRightOf="@+id/lineSpinner"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvBg"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="8dp"
+        android:background="#e6e6e6"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stationSpinner" />
+
+    <TextView
+        android:id="@+id/tvNextArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="12dp"
+        android:text="▶"
+        android:textSize="18dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvBg"
+        android:layout_marginEnd="8dp" />
+
+    <TextView
+        android:id="@+id/tvNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:text="TextView"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@+id/tvBg"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintRight_toLeftOf="@+id/tvNextArrow"
+        android:layout_marginRight="8dp" />
+
+    <TextView
+        android:id="@+id/tvPrevArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="12dp"
+        android:text="◀"
+        android:textSize="18dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvBg"
+        android:layout_marginStart="8dp" />
+
+    <TextView
+        android:id="@+id/tvPrev"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:text="TextView"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@+id/tvBg"
+        android:layout_marginStart="8dp"
+        app:layout_constraintLeft_toRightOf="@+id/tvPrevArrow"
+        android:layout_marginLeft="8dp" />
+
+    <TextView
+        android:id="@+id/tvNow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="9dp"
+        android:gravity="center"
+        android:text="TextView"
+        android:textColor="#000"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        app:layout_constraintHorizontal_bias="0.397"
+        app:layout_constraintLeft_toRightOf="@+id/tvPrev"
+        app:layout_constraintRight_toLeftOf="@+id/tvNext"
+        app:layout_constraintTop_toTopOf="@+id/tvBg" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_weight="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvBg"
+        app:layout_constraintVertical_bias="0.0"
+        tools:listitem="@layout/list_item" />
+
+</android.support.constraint.ConstraintLayout>
